@@ -24,7 +24,7 @@ function Navigation() {
     return (
         <div className="nav">
             <Link to="/" onClick={onClick}>Home</Link>
-            <Link to={url} onClick={onClickA}>About</Link>
+            <Link to={url} onClick={onClickA}>Last</Link>
         </div>
     );
 }
