@@ -13,21 +13,28 @@ function Detail() {
         ).json();
         setMovieInfo(json.data.movie);
         setLoading(false);
-    }
-    useEffect(() => {getMovieInfo();}, []);
+    };
 
-    console.log(movieInfo);
+    let nowUrl = window.location.pathname;
 
-    return (<div>
-        {loading
-            ? <h1>Loading....</h1>
+    
+    useEffect(() => {
+        setLoading(true);
+        getMovieInfo();
+    }, [nowUrl]);
+    
+    return (
+        loading
+            ? <div><h1>Loading....</h1></div>
             : <MovieDetail
+                url={movieInfo.url}
+                year={movieInfo.year}
+                rating={movieInfo.rating}
                 coverImg={movieInfo.medium_cover_image}
-                title={movieInfo.title}
+                title={movieInfo.title_long}
                 summary={movieInfo.description_full}
                 genres={movieInfo.genres} />
-        }
-    </div>);
+        );
 }
 
 export default Detail;

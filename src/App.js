@@ -4,14 +4,15 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
+import Navigation from "./components/Navigation";
 import Home from './routes/Home';
 import Detail from './routes/Detail';
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Navigation />
       <Routes>
-        <Route path="/abot-us" element={<h1>Hello</h1>} />
         <Route path="/movie/:id" element={<Detail />} />
         <Route path="/" element={<Home />}/>
       </Routes>

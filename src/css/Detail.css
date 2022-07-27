@@ -1,0 +1,55 @@
+.detailContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.detail {
+    margin: 5px 0;
+    color: #6a6a6a;
+}
+
+.btnGoSite {
+    display: block;
+    margin: 5px auto;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 1px 20px rgb(0 0 0 / 20%);
+    text-decoration: none;
+    font-weight: 600;
+    background-color: aliceblue;
+    color: #1e6b7b;
+    text-align: center;
+}
+
+.btnGoSite:hover {
+    background-color: #1e6b7b;
+    color: aliceblue;
+}
+
+.detailContainer .detailInfo {
+    padding: 0px 20px;
+}
+
+.detailContainer .detailTitle {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+}
+
+.detailContainer .detailGenres {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.detailContainer .detailGenre {
+    margin-right: 8px;
+}
