@@ -27,7 +27,7 @@ function Home() {
   return (
     <section className="container">
       {loading
-        ? <h1>Loading....</h1>
+        ? <div className="loadingWrapper"><h1 className="loading">Loading....</h1></div>
         : <div className="movies">
             {movies.map((movie) => (
               <Movie

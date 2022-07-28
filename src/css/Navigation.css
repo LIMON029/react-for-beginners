@@ -1,35 +1,55 @@
 .nav {
-    z-index: 1;
-    position: fixed;
-    top: 50px;
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 10px 20px;
-    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-    border-radius: 5px;
-  }
+  z-index: 1;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: none;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 5px 16px -5px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  border-radius: 5px;
+}
+
+.nav .divisionLine {
+  height: 1px;
+  background-color: lightgrey;
+  border-width: 0px;
+  margin: 0px;
+}
   
-  @media screen and (max-width: 1090px) {
-    .nav {
-      left: initial;
-      top: initial;
-      bottom: 0px;
-      width: 100%;
-    }
+@media screen and (max-width: 1090px) {
+  .nav {
+    left: initial;
+    top: initial;
+    bottom: 0px;
+    width: 100%;
   }
-  
-  .nav a {
-    text-decoration: none;
-    color: #0008fc;
-    text-transform: uppercase;
-    font-size: 12px;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  .nav a:not(:last-child) {
-    margin-bottom: 20px;
-  }
+}
+
+.nav .nav_btn {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.nav_btn:hover {
+  background: lightgray;
+  color: white;
+}
+
+.nav .nav_home {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.nav .nav_last {
+  border-radius: 0px 0px 5px 5px;
+}

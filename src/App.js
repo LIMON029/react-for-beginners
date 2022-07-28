@@ -7,6 +7,7 @@ import {
 import Navigation from "./components/Navigation";
 import Home from './routes/Home';
 import Detail from './routes/Detail';
+import "./css/App.css"
 
 function App() {
   return (

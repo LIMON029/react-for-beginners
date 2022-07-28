@@ -1,30 +1,27 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../css/Navigation.css"
 
 function Navigation() {
     const [url, setUrl] = useState("/");
     const [lastUrl, setLastUrl] = useState("/");
+    let location = useLocation().pathname;
+    let navigate = useNavigate();
 
-    function onClick() {
-        let temp = window.location.pathname;
-        setUrl("/movie/" + temp.split("/")[2]);
-    }
-
-    function onClickA() {
-        let temp = window.location.pathname;
-        if(lastUrl !== "/") {
+    useEffect(() => {
+        if(location !== "/") {
             setUrl(lastUrl);
+            setLastUrl(location);
         } else {
-            setUrl("/movie/" + temp.split("/")[2]);
+            setUrl(lastUrl);
         }
-        setLastUrl("/movie/" + temp.split("/")[2]);
-    }
+    }, [location])
     
     return (
         <div className="nav">
-            <Link to="/" onClick={onClick}>Home</Link>
-            <Link to={url} onClick={onClickA}>Last</Link>
+            <Link to="/" className="nav_btn nav_home">Home</Link>
+            <hr className="divisionLine" />
+            <p className="nav_btn nav_last" onClick={() => {navigate(url);}}>Last</p>
         </div>
     );
 }

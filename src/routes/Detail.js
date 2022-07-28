@@ -25,7 +25,7 @@ function Detail() {
     
     return (
         loading
-            ? <div><h1>Loading....</h1></div>
+            ? <div className='loadingWrapper'><h1 className="loading">Loading....</h1></div>
             : <MovieDetail
                 url={movieInfo.url}
                 year={movieInfo.year}
