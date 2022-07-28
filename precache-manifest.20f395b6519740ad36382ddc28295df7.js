@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/react-for-beginners/static/js/runtime~main.93ab4fdb.js"
   },
   {
-    "revision": "87d84758aa9dc49e60ae8861fe00d733",
+    "revision": "8e7dac16454416077f1f0faa6bb8d0ed",
     "url": "/react-for-beginners/index.html"
   }
 ];
